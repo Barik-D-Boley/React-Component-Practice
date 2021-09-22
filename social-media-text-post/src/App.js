@@ -5,11 +5,9 @@ function App() {
     const people = data;
     return (
         <>
-        {
-            people.map((person) => {
+            {people.map((person) => {
                 return <Post data={person} key={person.id} />
-            })
-        }
+            })}
         </>
     );
 }
