@@ -1,9 +1,18 @@
+@font-face {
+  font-family: oswald;
+  src: url(./Styles/fonts/Oswald-Light.ttf);
+}
+* {
+  font-family: oswald;
+}
+
 img {
   width: 12em;
   height: 12em;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin: 1rem 0 0 1rem;
 }
 
 body {
@@ -11,39 +20,47 @@ body {
 }
 
 .blogContainer {
-  border: 1px solid black;
+  border: 1px solid #000000;
+  background-color: #FFFFFF;
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
 .profile {
-  border: 1px solid black;
   width: 12rem;
 }
 
 .name {
+  font-family: oswald;
   font-size: 3rem;
   padding-top: 1rem;
-  border: 1px solid black;
   width: 80%;
+  margin: 4rem 0 0 2rem;
 }
 
 .content {
-  border: 1px solid black;
   flex: 1 1 auto;
   width: 100%;
-}
-
-.like {
-  border: 1px solid black;
-}
-
-.dislike {
-  border: 1px solid black;
+  margin: 1% 2% 0 2%;
 }
 
 .btn {
   width: 3rem;
   height: 3rem;
+  margin-top: 1rem;
+  background-color: white;
+  border: none;
+}
+
+.blogText {
+  font-size: 1.5rem;
+}
+
+#likeBtn {
+  margin-left: 2%;
+}
+
+#dislikeBtn {
+  margin-left: 1rem;
 }/*# sourceMappingURL=main.css.map */
