@@ -13,7 +13,14 @@ const BlogPost = ({data}) => {
     const [dislikeColor, setDislikeColor] = useState("black");
 
     function like() {
-        if (likeBoolean === false) {
+        if ((likeBoolean === false) && (dislikeBoolean === true)) {
+            setLikes(likes + 1);
+            setLikeColor("#1F51FF")
+            setDislikes(dislikes - 1);
+            setDislikeColor("black");
+            likeBoolean = true;
+            dislikeBoolean = false;
+        } else if (likeBoolean === false) {
             setLikes(likes + 1);
             setLikeColor("#1F51FF");
             likeBoolean = true;
@@ -24,7 +31,14 @@ const BlogPost = ({data}) => {
         }
     }
     function dislike() {
-        if (dislikeBoolean === false) {
+        if ((likeBoolean === true) && (dislikeBoolean === false)) {
+            setLikes(likes - 1);
+            setLikeColor("black")
+            setDislikes(dislikes + 1);
+            setDislikeColor("#1F51FF");
+            likeBoolean = false;
+            dislikeBoolean = true;
+        } else if (dislikeBoolean === false) {
             setDislikes(dislikes + 1);
             setDislikeColor("#1F51FF");
             dislikeBoolean = true;
